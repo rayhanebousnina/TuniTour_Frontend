@@ -1,0 +1,22 @@
+.search_btn {
+    background-color: #78D196;
+    border-color: #78D196;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 80px;
+    height: 45px;
+}
+.search_btn:hover {
+    background-color: #78D196;
+    border-color: #78D196;
+}
+.search_input {
+    height: 45px !important;
+}
+#input_one {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.search_icon {
+    font-size: 25px;
+}
