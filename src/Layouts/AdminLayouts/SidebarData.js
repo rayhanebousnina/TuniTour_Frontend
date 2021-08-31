@@ -3,6 +3,7 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 
+
 export const SidebarData = [
   {
     title: 'Home',
@@ -11,21 +12,33 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Reports',
-    path: '/admin/reports',
-    icon: <IoIcons.IoIosPaper />,
+    title: 'Categories',
+    path: '/admin/categories',
+    icon: <FaIcons.FaThLarge />,
     cName: 'nav-text'
   },
   {
-    title: 'Products',
-    path: '/admin/products',
-    icon: <FaIcons.FaCartPlus />,
+    title: 'Articles',
+    path: '/admin/articles',
+    icon: <FaIcons.FaFileAlt />,
     cName: 'nav-text'
   },
   {
-    title: 'Team',
-    path: '/admin/team',
-    icon: <IoIcons.IoMdPeople />,
+    title: 'Services',
+    path: '/admin/services',
+    icon: <FaIcons.FaHandHoldingUsd />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Activities',
+    path: '/admin/activities',
+    icon: <FaIcons.FaWalking />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Service Owners',
+    path: '/admin/profiles',
+    icon: <FaIcons.FaUsers />,
     cName: 'nav-text'
   },
   {
@@ -35,8 +48,8 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Support',
-    path: '/admin/support',
+    title: 'Notifications',
+    path: '/admin/notifications',
     icon: <IoIcons.IoMdHelpCircle />,
     cName: 'nav-text'
   }
