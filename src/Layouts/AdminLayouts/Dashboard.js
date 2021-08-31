@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Dashboard.css';
 import { IconContext } from 'react-icons';
+import { Image } from "react-bootstrap";
 
 function Dashboard() {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
 
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -18,9 +19,15 @@ function Dashboard() {
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
+          <Link to='admin/account' className='menu-bars ms-auto'>
+              <div className='d-flex justify-content-around'>
+                <Image className="profile_pic" src="https://www.tekoway.com/wp-content/uploads/2018/12/John-Doe.jpg"/>
+                <h4>My Profile</h4>
+              </div>            
+          </Link>          
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className='nav-menu-items' onClick={showSidebar}>
+          <ul className='nav-menu-items' onClick={showSidebar}>         
             <li className='navbar-toggle'>
               <Link to='#' className='menu-bars'>
                 <AiIcons.AiOutlineClose />

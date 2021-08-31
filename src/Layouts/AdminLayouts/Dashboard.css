@@ -70,4 +70,14 @@
   span {
     margin-left: 16px;
   }
-  
+
+
+/* AdminHome Layout */
+.add_btn {
+    width: 6rem;
+}
+.profile_pic {
+    border-radius: 5rem;
+    height: 3rem;
+    width: auto;
+}
