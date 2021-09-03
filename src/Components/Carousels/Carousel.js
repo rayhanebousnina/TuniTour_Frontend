@@ -1,35 +1,44 @@
-import React from 'react'
-import OwlCarousel from 'react-owl-carousel'
-import 'owl.carousel/dist/assets/owl.carousel.min.css'
-import 'owl.carousel/dist/assets/owl.theme.default.min.css'
-import './Carousel.css'
-import a from '../../Assets/a.jpg'
-import b from '../../Assets/b.jpg'
-import c from '../../Assets/c.jpg' 
+import React, { useEffect } from "react";
+import { Image } from "react-bootstrap";
+import { useSelector, useDispatch } from "react-redux";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.min.css";
+import "owl.carousel/dist/assets/owl.theme.default.min.css";
+import "./Carousel.css";
+import { getCities } from "../../Redux/Actions/cityActions";
 
 const Carousel = () => {
-  return(
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCities());
+  }, [dispatch]);
+
+  const cities = useSelector((state) => state.citiesReducer.cities);
+  console.log("cities", cities);
+  return (
     <OwlCarousel
-    className="owl-theme"
-    items="5"
-    autoPlay
-    nav
-    dots
-    loop
-    margin={10}
+      className="owl-theme"
+      items="4"
+      autoPlay
+      nav
+      dots
+      loop
+      margin={10}
     >
-        <div className="item">
-            <img className="carousel_image" src={a}/>
+      {cities.map((el, key) => (
+        <div className="item" key={key}>
+          <Image className="carousel_image" src={el.cityImage} />
         </div>
-        <div className="item">
-            <img className="carousel_image" src={b}/>
-        </div>
-        <div className="item">
-            <img className="carousel_image" src={c}/>
-        </div>
+      ))}
+      {/* <div className="item">
+        <Image className="carousel_image" src={b} />
+      </div>
+      <div className="item">
+        <Image className="carousel_image" src={c} />
+      </div> */}
     </OwlCarousel>
-   )
+  );
+};
 
- }
-
-export default Carousel
+export default Carousel;
