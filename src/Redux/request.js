@@ -6,6 +6,7 @@ import {
   UPDATE_SERVICES_API,
   DELETE_SERVICES_API,
   GET_CITIES_API,
+  ADD_CITIES_API,
 } from "./Shared/apiURL";
 
 export const fetchServices = () =>
@@ -16,15 +17,17 @@ export const fetchServices = () =>
     })
     .then((res) => res.data);
 
-// export const publishDishes=()=>
-// Axios.post(ADD_DISHES_API,{
-//     Accept: 'application/json',
-//     'Content-Type': 'application/json',
-// }).then(res=>res.data)
-
 export const fetchCities = () =>
   axios
     .get(GET_CITIES_API, {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    })
+    .then((res) => res.data);
+
+export const publishCities = () =>
+  axios
+    .post(ADD_CITIES_API, {
       Accept: "application/json",
       "Content-Type": "application/json",
     })

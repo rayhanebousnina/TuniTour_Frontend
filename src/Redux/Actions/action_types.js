@@ -6,3 +6,4 @@ export const DELETE_SERVICE = "DELETE_SERVICE";
 /**********************************************************/
 
 export const GET_CITY = "GET_CITY";
+export const ADD_CITY = "ADD_CITY";

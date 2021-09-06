@@ -1,36 +1,37 @@
-import { fetchCities } from "../request";
-import { GET_CITY } from "./action_types";
+import { fetchCities, publishCities } from "../request";
+import { ADD_CITY, GET_CITY } from "./action_types";
 import axios from "axios";
 
-export function getCities() {
-  return (dispatch) => {
-    fetchCities()
-      .then((res) => {
-        dispatch({
-          type: GET_CITY,
-          payload: res,
-        });
-        // console.log(res, "res");
-      })
+// Get all cities
+export const getCities = () => async (dispatch) => {
+  try {
+    const res = await fetchCities();
+    console.log(res.data, "Mycity");
+    dispatch({
+      type: GET_CITY,
+      payload: res,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-      .catch((err) =>
-        // dispatch({
-        //   payload: err,
-        // })
-        console.log("error")
-      );
+// Add new city
+export const newCity =
+  (cityName, cityImage, cityDescription, cityServices) => async (dispatch) => {
+    try {
+      const res = await axios.post("http://localhost:2000/home/addCity", {
+        cityName,
+        cityImage,
+        cityDescription,
+        cityServices,
+      });
+      dispatch({
+        type: ADD_CITY,
+        payload: res.data,
+      });
+      console.log("payload");
+    } catch (error) {
+      console.log(error);
+    }
   };
-}
-
-// export const getCities = () => async (dispatch) => {
-//   try {
-//     const res = await axios.get("http://localhost:5000/home/allcities");
-//     console.log(res.data, "Mycity");
-//     dispatch({
-//       type: GET_CITY,
-//       payload: res.data,
-//     });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };

@@ -31,12 +31,6 @@ const Carousel = () => {
           <Image className="carousel_image" src={el.cityImage} />
         </div>
       ))}
-      {/* <div className="item">
-        <Image className="carousel_image" src={b} />
-      </div>
-      <div className="item">
-        <Image className="carousel_image" src={c} />
-      </div> */}
     </OwlCarousel>
   );
 };
