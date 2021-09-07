@@ -84,20 +84,20 @@ const AddServiceModal = () => {
             </Row>
             <Row className="mb-3 mx-1">
               <Form.Control
-                value={service.description}
-                onChange={handleInputChange}
-                name="description"
-                placeholder="Service Description"
-                type="text"
-              />
-            </Row>
-            <Row className="mb-3 mx-1">
-              <Form.Control
                 value={service.image}
                 onChange={handleInputChange}
                 name="image"
                 placeholder="Service Image"
                 type="file"
+              />
+            </Row>
+            <Row className="mb-3 mx-1">
+              <Form.Control
+                value={service.description}
+                onChange={handleInputChange}
+                name="description"
+                placeholder="Service Description"
+                type="text"
               />
             </Row>
             <Row className="mb-3 mx-1">

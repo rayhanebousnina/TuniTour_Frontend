@@ -22,7 +22,10 @@ export const newService =
     serviceName,
     serviceImage,
     serviceDescription,
-    serviceDetails,
+    serviceAddress,
+    serviceWorkingHours,
+    servicePhone,
+    servicePrice,
     serviceLocation,
     serviceCategory
   ) =>
@@ -32,7 +35,10 @@ export const newService =
         serviceName,
         serviceImage,
         serviceDescription,
-        serviceDetails,
+        serviceAddress,
+        serviceWorkingHours,
+        servicePhone,
+        servicePrice,
         serviceLocation,
         serviceCategory,
       });
