@@ -22,6 +22,12 @@ export const SidebarData = [
     cName: "nav-text",
   },
   {
+    title: "Services",
+    path: "/admin/services",
+    icon: <FaIcons.FaHandHoldingUsd />,
+    cName: "nav-text",
+  },
+  {
     title: "Service Owners",
     path: "/admin/profiles",
     icon: <FaIcons.FaUsers />,

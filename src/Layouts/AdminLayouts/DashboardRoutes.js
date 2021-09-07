@@ -5,6 +5,7 @@ import AdminHome from "./AdminHome";
 import AdminAccount from "./AdminAccount";
 import Category from "./Category";
 import Cities from "./Cities";
+import Services from "./Services";
 
 const DashboardRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const DashboardRoutes = () => {
           <Route path="/admin/account" component={AdminAccount} />
           <Route path="/admin/categories" component={Category} />
           <Route path="/admin/cities" component={Cities} />
+          <Route path="/admin/services" component={Services} />
         </Switch>
       </Router>
     </div>

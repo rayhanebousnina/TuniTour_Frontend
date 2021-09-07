@@ -9,6 +9,7 @@ import {
   ADD_CITIES_API,
 } from "./Shared/apiURL";
 
+/***********************************************************************/
 export const fetchServices = () =>
   axios
     .get(GET_SERVICES_API, {
@@ -17,6 +18,14 @@ export const fetchServices = () =>
     })
     .then((res) => res.data);
 
+export const publishServices = () =>
+  axios
+    .post(ADD_SERVICES_API, {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    })
+    .then((res) => res.data);
+/***********************************************************************/
 export const fetchCities = () =>
   axios
     .get(GET_CITIES_API, {
