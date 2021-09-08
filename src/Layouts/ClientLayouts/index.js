@@ -10,6 +10,7 @@ import b from "../../Assets/b.jpg";
 import c from "../../Assets/c.jpg";
 import CarouselFluid from "../../Components/Carousels/CarouselFluid";
 import Footer from "../../Components/Footer/Footer";
+import ServiceCard from "../../Components/Cards/ServiceCard";
 
 const Home = () => {
   return (
@@ -41,6 +42,14 @@ const Home = () => {
         </Container>
       </div>
 
+      {/* Services section */}
+      <div className="Service_section">
+        <Container className="my-5">
+          <h1>Find different activities and places to discover</h1>
+          {/* Service card */}
+          <ServiceCard />
+        </Container>
+      </div>
       {/* Categories section */}
       <div className="my-5">
         <Container>

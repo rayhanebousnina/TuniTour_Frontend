@@ -1,3 +1,31 @@
 .carousel_image {
   height: 13rem !important;
 }
+.city_card {
+  position: relative;
+}
+.city_img {
+  height: 300px;
+  width: 300px;
+  opacity: 1;
+  display: block;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.city_title {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.city_card:hover .city_img {
+  opacity: 0.3;
+}
+.city_card:hover .city_title {
+  opacity: 1;
+  font-weight: 500;
+}

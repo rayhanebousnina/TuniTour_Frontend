@@ -3,9 +3,10 @@ import {
   ADD_SERVICE,
   UPDATE_SERVICE,
   DELETE_SERVICE,
+  GET_SERVICE_BY_ID,
 } from "../Actions/action_types";
 
-const initialState = { services: [] };
+const initialState = { services: [], service: null };
 export const servicesReducer = (state = initialState, action) => {
   const { payload, type } = action;
   switch (type) {
@@ -14,6 +15,13 @@ export const servicesReducer = (state = initialState, action) => {
       state = {
         ...state,
         services: payload,
+      };
+
+    //Get service by id
+    case GET_SERVICE_BY_ID:
+      state = {
+        ...state,
+        service: payload,
       };
 
     //Add city

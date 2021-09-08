@@ -1,65 +1,72 @@
 body {
-    background-color: #f7f7f7f7;
+  background-color: #f7f7f7f7;
 }
 .landing_section {
-    background-image: url(../../Assets/land.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 40rem;
+  background-image: url(../../Assets/land.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
 }
 .landing_section_content {
-    margin-top: 15%;
+  margin-top: 15%;
 }
 .category_card {
-    position: relative;
+  position: relative;
 }
 .category_img {
-    height: 300px;
-    width: 300px;
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden;
+  height: 300px;
+  width: 300px;
+  opacity: 1;
+  display: block;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
 }
 .category_title {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 .category_card:hover .category_img {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 .category_card:hover .category_title {
-    opacity: 1;
-    font-weight: 500;
+  opacity: 1;
+  font-weight: 500;
 }
 .howitworks_section {
-    background-image: url(../../Assets/howitworks2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 15rem;
-    text-align: center;
+  background-image: url(../../Assets/howitworks2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 15rem;
+  text-align: center;
 }
 .find_out_btn {
-    background-color: #78D196 !important;
-    border-color: #78D196 !important;
-    border-radius: 30px !important;
-    width: 150px;
-    height: 45px;
+  background-color: #78d196 !important;
+  border-color: #78d196 !important;
+  border-radius: 30px !important;
+  width: 150px;
+  height: 45px;
 }
 .title_section {
-    text-align: center;
+  text-align: center;
 }
 .title {
-    background-color: rgba(0, 0, 0, 0.555);
-    color: #f7f7f7f7;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.555);
+  color: #f7f7f7f7;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 50px;
+}
+.Service_section {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 40rem;
 }

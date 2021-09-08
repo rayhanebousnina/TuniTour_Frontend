@@ -35,7 +35,7 @@ const Services = () => {
                   />
                   <Card.Body>
                     <Card.Title>{el.serviceName}</Card.Title>
-                    <Card.Text>{el.serviceDescription}</Card.Text>
+                    <Card.Text>{el.serviceLocation}</Card.Text>
                     <Button variant="primary">Go somewhere</Button>
                   </Card.Body>
                 </Card>
