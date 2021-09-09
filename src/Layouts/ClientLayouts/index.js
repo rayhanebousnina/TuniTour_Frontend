@@ -19,13 +19,16 @@ const Home = () => {
       <div className="landing_section">
         {/* Navigation bar */}
         <NavigationBar />
+        <Row className="mt-5 text-center">
+          <h1>This is your guide</h1>
+        </Row>
         <Container className="landing_section_content">
           <Row>
             <Col md={{ span: 6, offset: 3 }}>
               <Searchbar />
             </Col>
           </Row>
-          <Row className="title_section mt-5">
+          <Row className="title_section">
             <Col md={{ span: 6, offset: 3 }}>
               <h2 className="title">Have no idea where to go ?</h2>
               <Btn />
@@ -44,7 +47,7 @@ const Home = () => {
 
       {/* Services section */}
       <div className="Service_section">
-        <Container className="my-5">
+        <Container className="py-5">
           <h1>Find different activities and places to discover</h1>
           {/* Service card */}
           <ServiceCard />

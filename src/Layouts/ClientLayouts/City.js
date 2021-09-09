@@ -27,6 +27,7 @@ const City = () => {
           <Row>
             <Col className="mt-5" md={{ span: 8, offset: 4 }}>
               <h2>{city.cityName} City</h2>
+              <img src={city.cityImage} />
             </Col>
           </Row>
         </Container>

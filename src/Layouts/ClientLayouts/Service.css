@@ -1,0 +1,9 @@
+.service_img {
+  width: 100%;
+  height: 30rem;
+}
+.service_title {
+  background-color: #78d196;
+  color: white;
+  padding: 2rem;
+}
