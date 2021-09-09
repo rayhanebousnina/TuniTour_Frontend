@@ -12,12 +12,12 @@ const Searchbar = () => {
           id="input_one"
           className="search_input"
           aria-label="First name"
-          placeholder="Budget"
+          placeholder="City"
         />
         <FormControl
           className="search_input"
           aria-label="Last name"
-          placeholder="Adress"
+          placeholder="Category"
         />
         <Button className="mini_search_btn">
           <FaSistrix className="search_icon" />

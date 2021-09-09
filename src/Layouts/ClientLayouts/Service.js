@@ -37,16 +37,28 @@ const Service = () => {
               {service.serviceDescription}
             </Col>
             <Col>
-              <Card border="light" style={{ width: "18rem" }}>
-                <Card.Header>Header</Card.Header>
-                <Card.Body>
-                  <Card.Title>Light Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <Container>
+                <Row>
+                  <Col md={{ span: 6, offset: 3 }}>
+                    <span class="hint-star star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </span>
+                    <h4>146 avis</h4>
+                  </Col>
+                </Row>
+                <Row className="my-3">
+                  <Col md={2}>
+                    <i class="fas fa-tags fa-2x"></i>
+                  </Col>
+                  <Col md={10}>
+                    <h5>{service.servicePrice} DNT</h5>
+                  </Col>
+                </Row>
+              </Container>
             </Col>
           </Row>
         </div>

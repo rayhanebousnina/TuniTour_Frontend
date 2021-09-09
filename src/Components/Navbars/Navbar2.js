@@ -19,7 +19,7 @@ const NavigationBar2 = () => {
   return (
     <div>
       <Navbar className="nav" bg="transparent" expand="lg">
-        <Container>
+        <Container fluid>
           <Navbar.Brand href="#home">
             <Image fluid src={logo} className="logo_style" />
           </Navbar.Brand>
