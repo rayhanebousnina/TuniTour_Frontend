@@ -25,11 +25,15 @@ const NavigationBar = () => {
           <h3 className="name_style">
             <span className="T">T</span>uni<span className="T">T</span>our
           </h3>
-          <Nav className="ms-auto">
-            <Nav.Link href="#link">
+          <Nav className="ms-auto nav_items">
+            <Nav.Link href="#link" className="mr_nav_item">
               <FaHeart /> Wishlist
             </Nav.Link>
-            <NavDropdown title={<FaGlobeAmericas />} id="basic-nav-dropdown">
+            <NavDropdown
+              title={<FaGlobeAmericas />}
+              id="basic-nav-dropdown"
+              className="mr_nav_item"
+            >
               <NavDropdown.Item href="#action/3.1">Français</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Arabe</NavDropdown.Item>
             </NavDropdown>

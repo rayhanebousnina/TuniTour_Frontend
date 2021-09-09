@@ -19,9 +19,11 @@ const Home = () => {
       <div className="landing_section">
         {/* Navigation bar */}
         <NavigationBar />
-        <Row className="mt-5 text-center">
-          <h1>This is your guide</h1>
-        </Row>
+        <Container>
+          <Row className="mt-5 text-center">
+            <h1>This is your guide</h1>
+          </Row>
+        </Container>
         <Container className="landing_section_content">
           <Row>
             <Col md={{ span: 6, offset: 3 }}>

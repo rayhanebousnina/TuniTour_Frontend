@@ -2,11 +2,18 @@
   border-bottom: 2px solid rgba(0, 0, 0, 0.116);
 }
 .logo_style {
-  height: 5rem;
+  height: 4rem;
 }
 .name_style {
   color: rgb(15, 15, 15);
 }
 .T {
   color: #78d196;
+}
+.nav_items {
+  display: flex;
+  flex-direction: row;
+}
+.mr_nav_item {
+  margin-right: 10px;
 }
