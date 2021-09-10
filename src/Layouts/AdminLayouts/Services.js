@@ -1,19 +1,34 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { getServices } from "../../Redux/Actions/serviceActions";
 import AddServiceModal from "../../Components/Modals/AddServiceModal";
+import axios from "axios";
 // import "./Services.css";
 
 const Services = () => {
-  const dispatch = useDispatch();
-
+  /*  const [services, setService] = useState([]);
+  
+  const fetchServices = () =>
+    axios
+      .get("http://localhost:4000/home/allservices", {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      })
+      .then((res) => setService(res.data));
   useEffect(() => {
-    dispatch(getServices());
-  }, [dispatch]);
+    fetchServices();
+  }, []);
+  console.log("services hhh", services);
+  */
 
+  const dispatch = useDispatch();
   const services = useSelector((state) => state.servicesReducer.services);
-  console.log("services", services);
+  console.log("fafafafa", services);
+  useEffect(() => {
+    console.log("ddd", getServices());
+    dispatch(getServices());
+  }, []);
 
   return (
     <Container>
@@ -23,6 +38,7 @@ const Services = () => {
           <Row className="my-5">
             <AddServiceModal />
           </Row>
+
           <Row className="my-5">
             {services.map((el, key) => (
               <Col md={4} sm={6} xs={12}>

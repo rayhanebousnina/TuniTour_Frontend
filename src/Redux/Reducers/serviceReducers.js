@@ -7,7 +7,7 @@ import {
 } from "../Actions/action_types";
 
 const initialState = { services: [], service: null };
-export const servicesReducer = (state = initialState, action) => {
+export const servicesReducer = (state = { services: [] }, action) => {
   const { payload, type } = action;
   switch (type) {
     //Get city
@@ -16,6 +16,7 @@ export const servicesReducer = (state = initialState, action) => {
         ...state,
         services: payload,
       };
+      break;
 
     //Get service by id
     case GET_SERVICE_BY_ID:
@@ -23,6 +24,7 @@ export const servicesReducer = (state = initialState, action) => {
         ...state,
         service: payload,
       };
+      break;
 
     //Add city
     case ADD_SERVICE:
@@ -30,8 +32,7 @@ export const servicesReducer = (state = initialState, action) => {
         ...state,
         services: [...state.services, payload],
       };
-    // console.log(state)
-    // break;
+      break;
   }
   return state;
 };

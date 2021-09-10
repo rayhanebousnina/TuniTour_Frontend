@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { signout } from "../../Redux/Actions/userLoginActions";
 import ButtonNav from "../Buttons/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -9,14 +11,25 @@ import {
   Nav,
   NavDropdown,
   Image,
+  Button,
 } from "react-bootstrap";
 import { FaGlobeAmericas, FaHeart } from "react-icons/fa";
 import logo from "../../Assets/TuniTour.png";
 import "./Navbar.css";
 
 const NavigationBar = () => {
-  return (
-    <div>
+  const user = useSelector((state) => state.userLoginReducer);
+  const dispatch = useDispatch();
+  const logout = () => {
+    dispatch(signout());
+  };
+
+  const userLogout = () => {
+    window.location.reload(logout());
+  };
+
+  const notLoggedIn = () => {
+    return (
       <Navbar className="nav" bg="transparent" expand="lg">
         <Container>
           <Navbar.Brand href="#home">
@@ -41,8 +54,39 @@ const NavigationBar = () => {
           <ButtonNav />
         </Container>
       </Navbar>
-    </div>
-  );
+    );
+  };
+  const LoggedIn = () => {
+    return (
+      <Navbar className="nav" bg="transparent" expand="lg">
+        <Container>
+          <Navbar.Brand href="#home">
+            <Image fluid src={logo} className="logo_style" />
+          </Navbar.Brand>
+          <h3 className="name_style">
+            <span className="T">T</span>uni<span className="T">T</span>our
+          </h3>
+          <Nav className="ms-auto nav_items">
+            <Nav.Link href="#link" className="mr_nav_item">
+              <FaHeart /> Wishlist
+            </Nav.Link>
+            <Button onClick={userLogout}>logOut</Button>
+          </Nav>
+        </Container>
+      </Navbar>
+    );
+  };
+
+  const nav = () => {
+    {
+      if (user.authenticate) {
+        return LoggedIn();
+      } else {
+        return notLoggedIn();
+      }
+    }
+  };
+  return <div>{nav()}</div>;
 };
 
 export default NavigationBar;

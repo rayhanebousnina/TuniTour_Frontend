@@ -6,7 +6,7 @@ import axios from "axios";
 export const getServices = () => async (dispatch) => {
   try {
     const res = await fetchServices();
-    console.log(res.data, "Myservice");
+    console.log(res, "Myservice");
     dispatch({
       type: GET_SERVICE,
       payload: res,

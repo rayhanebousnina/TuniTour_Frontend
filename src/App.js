@@ -4,6 +4,9 @@ import Home from "./Layouts/ClientLayouts";
 import City from "./Layouts/ClientLayouts/City";
 import Service from "./Layouts/ClientLayouts/Service";
 import DashboardRoutes from "./Layouts/AdminLayouts/DashboardRoutes";
+import RegisterPage from "./Layouts/ClientLayouts/RegisterPage";
+import LoginPage from "./Layouts/ClientLayouts/LoginPage";
+import UserPrivateRoute from "./PrivateRoutes/UserPrivateRoute";
 
 function App() {
   return (
@@ -12,7 +15,11 @@ function App() {
         <Route path="/home" component={Home} />
         <Route path="/city/:id" component={City} />
         <Route path="/service/:id" component={Service} />
-        <Route path="/admin" component={DashboardRoutes} />
+        <Route path="/user" component={RegisterPage} />
+        <Route path="/login" component={LoginPage} />
+        <Switch>
+          <UserPrivateRoute path="/admin" component={DashboardRoutes} />
+        </Switch>
       </Router>
     </div>
   );

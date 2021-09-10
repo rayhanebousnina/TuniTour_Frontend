@@ -64,25 +64,57 @@ const Home = () => {
               className="d-flex justify-content-center category_card"
               md={4}
               sm={12}
+              xs={12}
             >
-              <Image className="category_img" src={a} rounded />
+              <Image fluid className="category_img" src={a} rounded />
               <div className="category_title h3">Make an escape</div>
             </Col>
             <Col
               className="d-flex justify-content-center category_card"
               md={4}
               sm={12}
+              xs={12}
             >
-              <Image className="category_img" src={b} rounded />
+              <Image fluid className="category_img" src={b} rounded />
               <div className="category_title h3">Discover activities</div>
             </Col>
             <Col
               className="d-flex justify-content-center category_card"
               md={4}
               sm={12}
+              xs={12}
             >
-              <Image className="category_img" src={c} rounded />
+              <Image fluid className="category_img" src={c} rounded />
               <div className="category_title h3">Culture discover</div>
+            </Col>
+          </Row>
+          <Row className="my-5">
+            <Col
+              className="d-flex justify-content-center category_card"
+              md={4}
+              sm={12}
+              xs={12}
+            >
+              <Image fluid className="category_img" src={a} rounded />
+              <div className="category_title h3">Take a coffee break</div>
+            </Col>
+            <Col
+              className="d-flex justify-content-center category_card"
+              md={4}
+              sm={12}
+              xs={12}
+            >
+              <Image fluid className="category_img" src={b} rounded />
+              <div className="category_title h3">Relaxation centers</div>
+            </Col>
+            <Col
+              className="d-flex justify-content-center category_card"
+              md={4}
+              sm={12}
+              xs={12}
+            >
+              <Image fluid className="category_img" src={c} rounded />
+              <div className="category_title h3">Go to cinemas</div>
             </Col>
           </Row>
         </Container>

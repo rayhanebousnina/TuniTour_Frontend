@@ -16,6 +16,7 @@ export const citiesReducer = (state = initialState, action) => {
         ...state,
         cities: payload,
       };
+      break;
 
     //Get city by id
     case GET_CITY_BY_ID:
@@ -23,15 +24,14 @@ export const citiesReducer = (state = initialState, action) => {
         ...state,
         city: payload,
       };
-
+      break;
     //Add city
     case ADD_CITY:
       state = {
         ...state,
         cities: [...state.cities, payload],
       };
-    // console.log(state)
-    // break;
+      break;
   }
   return state;
 };
