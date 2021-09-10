@@ -72,6 +72,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 40rem;
+  min-height: 40rem;
   color: white;
 }

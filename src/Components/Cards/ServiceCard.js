@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Button, Carousel, Image } from "react-bootstrap";
+import { Button, Carousel, Image, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getServices } from "../../Redux/Actions/serviceActions";
@@ -56,7 +56,7 @@ const ServiceCard = () => {
               <div class="product-image">
                 <Image fluid src={el.serviceImage} alt="" />
 
-                <div class="info">
+                <div class="info pt-5">
                   <h2> Description</h2>
                   <ul>
                     <li>

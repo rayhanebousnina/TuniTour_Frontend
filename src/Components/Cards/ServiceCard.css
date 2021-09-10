@@ -184,3 +184,23 @@
 .product-image:hover img {
   transform: scale(1.2, 1.2);
 }
+
+@media only screen and (max-width: 750px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+  }
+  .product-details {
+    width: 100%;
+    text-align: left;
+  }
+  .product-image {
+    width: 100%;
+  }
+  #container .product-details > p {
+    padding-top: 20px;
+    height: 50%;
+    width: calc(100% - 170px);
+  }
+}
