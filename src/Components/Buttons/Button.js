@@ -16,15 +16,17 @@ const ButtonNav = () => {
       <div className="dropdown-content">
         <NavDropdown.Item>
           {/* <RegisterModal /> */}
-          <Link to="/user">Sign Up</Link>
+          <Link to="/user" className="dropdown-style">
+            Sign Up
+          </Link>
         </NavDropdown.Item>
 
         <NavDropdown.Item>
           {/* <LoginModal /> */}
-          <Link to="/login">Login</Link>
+          <Link to="/login" className="dropdown-style">
+            Login
+          </Link>
         </NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item>Help</NavDropdown.Item>
       </div>
     </div>
   );

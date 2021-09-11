@@ -17,3 +17,16 @@
 .mr_nav_item {
   margin-right: 10px;
 }
+.navbar-nav .dropdown-menu {
+  position: absolute;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-nav {
+    display: none;
+  }
+  .search_input {
+    height: 45px !important;
+    font-size: 4.5vw;
+  }
+}

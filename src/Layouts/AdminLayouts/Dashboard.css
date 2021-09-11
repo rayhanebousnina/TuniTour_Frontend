@@ -83,8 +83,9 @@
 }
 
 .card {
-  height: 350px;
+  height: 550px;
   width: 90%;
+  margin: 10px 0px *;
 }
 
 .card-img,

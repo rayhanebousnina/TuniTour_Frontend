@@ -12,24 +12,39 @@ export const servicesReducer = (state = { services: [] }, action) => {
   switch (type) {
     //Get city
     case GET_SERVICE:
-      state = {
+      return {
         ...state,
         services: payload,
       };
-
     //Get service by id
     case GET_SERVICE_BY_ID:
-      state = {
+      return {
         ...state,
         service: payload,
       };
 
-    //Add city
+    //Add service
     case ADD_SERVICE:
-      state = {
+      return {
         ...state,
         services: [...state.services, payload],
       };
+    // Update service
+    case UPDATE_SERVICE:
+      return {
+        ...state,
+        services: state.services.map((service) =>
+          service._id === payload._id ? payload : service
+        ),
+      };
+    //delete service
+
+    case DELETE_SERVICE:
+      return {
+        ...state,
+        services: state.services.filter((data) => data._id !== payload),
+      };
+    default:
+      return state;
   }
-  return state;
 };

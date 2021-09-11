@@ -1,0 +1,50 @@
+Form input {
+  margin: 15px 0px;
+}
+
+.image-style {
+  max-height: 600px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 20px;
+}
+
+.btn-signup {
+  background-color: #78d196;
+  border-color: #78d196;
+}
+.btn-signup:hover {
+  background-color: #78d196;
+  border-color: #78d196;
+}
+
+.quote {
+  text-align: center;
+  color: wheat;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  font-size: xxx-large;
+}
+
+#image-bck {
+  background-image: url("../../Assets/signup.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.border-footer {
+  border-top: 1.5px solid rgba(49, 173, 55, 0.616);
+}
+
+@media only screen and (max-width: 600px) {
+  .group {
+    display: none;
+  }
+}

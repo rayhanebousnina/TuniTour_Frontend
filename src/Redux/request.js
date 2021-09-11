@@ -35,6 +35,14 @@ export const publishServices = () =>
       "Content-Type": "application/json",
     })
     .then((res) => res.data);
+
+export const deleteService = (id) =>
+  axios
+    .delete(DELETE_SERVICES_API, {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    })
+    .then((res) => res.data);
 /***********************************************************************/
 export const fetchCities = () =>
   axios
