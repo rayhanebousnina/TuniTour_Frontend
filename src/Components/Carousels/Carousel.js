@@ -48,7 +48,7 @@ const Carousel = () => {
   return (
     <>
       {cities.length && (
-        <OwlCarousel className="owl-theme" {...options}>
+        <OwlCarousel className="owl-theme pt-5" {...options}>
           {cities.map((el, key) => (
             <div className="item city_card" key={key}>
               <Image className="carousel_image city_img" src={el.cityImage} />

@@ -18,7 +18,7 @@ body {
 }
 .category_img {
   height: 300px;
-  width: 300px;
+  width: 100%;
   opacity: 1;
   display: block;
   transition: 0.5s ease;
@@ -46,7 +46,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  height: 15rem;
+  height: 20rem;
   text-align: center;
 }
 .find_out_btn {
@@ -74,4 +74,22 @@ body {
   background-size: cover;
   min-height: 40rem;
   color: white;
+}
+
+.titre-categories {
+  padding: 60px 30px;
+  background: rgb(146, 223, 172);
+  background: radial-gradient(
+    circle,
+    rgba(146, 223, 172, 1) 25%,
+    rgba(193, 241, 209, 1) 100%
+  );
+}
+.cities {
+  background: rgb(230, 241, 254);
+  background: radial-gradient(
+    circle,
+    rgba(230, 241, 254, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }

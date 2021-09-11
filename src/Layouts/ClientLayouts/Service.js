@@ -53,7 +53,7 @@ const Service = () => {
                 </Row>
                 <Row className="my-3">
                   <Col md={2}>
-                    <i class="fas fa-tags fa-2x"></i>
+                    <i class="fas fa-tags"></i>
                   </Col>
                   <Col md={10}>
                     <div>{service.servicePrice} DNT</div>
@@ -61,7 +61,7 @@ const Service = () => {
                 </Row>
                 <Row className="my-3">
                   <Col md={2}>
-                    <i class="fas fa-phone-square-alt fa-2x"></i>
+                    <i class="fas fa-phone-square-alt"></i>
                   </Col>
                   <Col md={10}>
                     <div>{service.servicePhone}</div>
@@ -69,7 +69,7 @@ const Service = () => {
                 </Row>
                 <Row className="my-3">
                   <Col md={2}>
-                    <i class="fas fa-clock fa-2x"></i>
+                    <i class="fas fa-clock"></i>
                   </Col>
                   <Col md={10}>
                     <div>{service.serviceWorkingHours}</div>
@@ -77,7 +77,7 @@ const Service = () => {
                 </Row>
                 <Row className="my-3">
                   <Col md={2}>
-                    <i class="fas fa-map-marked-alt fa-2x"></i>
+                    <i class="fas fa-map-marked-alt"></i>
                   </Col>
                   <Col md={10}>
                     <div>{service.serviceAddress}</div>

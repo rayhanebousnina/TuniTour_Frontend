@@ -16,7 +16,6 @@ export const servicesReducer = (state = { services: [] }, action) => {
         ...state,
         services: payload,
       };
-      break;
 
     //Get service by id
     case GET_SERVICE_BY_ID:
@@ -24,7 +23,6 @@ export const servicesReducer = (state = { services: [] }, action) => {
         ...state,
         service: payload,
       };
-      break;
 
     //Add city
     case ADD_SERVICE:
@@ -32,7 +30,6 @@ export const servicesReducer = (state = { services: [] }, action) => {
         ...state,
         services: [...state.services, payload],
       };
-      break;
   }
   return state;
 };

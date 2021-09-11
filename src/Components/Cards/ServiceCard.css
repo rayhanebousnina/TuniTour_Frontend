@@ -8,7 +8,7 @@
   overflow: hidden;
   margin: 5em auto;
   height: 350px;
-  width: 700px;
+  width: 950px;
 }
 
 .product-details {
@@ -201,6 +201,6 @@
   #container .product-details > p {
     padding-top: 20px;
     height: 50%;
-    width: calc(100% - 170px);
+    width: calc(100% - 500px);
   }
 }

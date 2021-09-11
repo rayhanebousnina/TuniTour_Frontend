@@ -16,7 +16,7 @@ function App() {
         <Route path="/city/:id" component={City} />
         <Route path="/service/:id" component={Service} />
         <Route path="/user" component={RegisterPage} />
-        <Route path="/login" component={LoginPage} />
+
         <Switch>
           <UserPrivateRoute path="/admin" component={DashboardRoutes} />
         </Switch>

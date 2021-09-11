@@ -7,16 +7,11 @@
   color: white;
   padding: 2rem;
 }
-.fa-tags {
-  color: rgb(255, 145, 0);
-}
-.fa-phone-square-alt {
-  color: green;
-}
-.fa-clock {
-  color: blue;
-}
+
 .service_box_info {
   border: 2px solid rgb(27, 27, 27);
   border-radius: 5px;
+}
+.fas {
+  font-size: 20px;
 }

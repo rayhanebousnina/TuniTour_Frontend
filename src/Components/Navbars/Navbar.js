@@ -14,7 +14,7 @@ import {
   Button,
 } from "react-bootstrap";
 import { FaGlobeAmericas, FaHeart } from "react-icons/fa";
-import logo from "../../Assets/TuniTour.png";
+import logo from "../../Assets/TuniTourLogo.png";
 import "./Navbar.css";
 
 const NavigationBar = () => {

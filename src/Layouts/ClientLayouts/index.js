@@ -5,9 +5,12 @@ import NavigationBar from "../../Components/Navbars/Navbar";
 import Searchbar from "../../Components/Searchbars/Searchbar";
 import Carousel from "../../Components/Carousels/Carousel";
 import "./index.css";
-import a from "../../Assets/a.jpg";
-import b from "../../Assets/b.jpg";
-import c from "../../Assets/c.jpg";
+import escape from "../../Assets/escape.jpg";
+import activity from "../../Assets/activity.jpg";
+import spa from "../../Assets/spa.jpg";
+import cinema from "../../Assets/cinema.jpg";
+import coffee from "../../Assets/coffee.jpg";
+import monument from "../../Assets/monument.jpg";
 import CarouselFluid from "../../Components/Carousels/CarouselFluid";
 import Footer from "../../Components/Footer/Footer";
 import ServiceCard from "../../Components/Cards/ServiceCard";
@@ -40,11 +43,14 @@ const Home = () => {
       </div>
       {/* Explore the cities section */}
       <div>
-        <Container className="my-5">
-          <h1>Explore the cities</h1>
+        <div className="py-5 cities">
+          <div className="ms-3">
+            <h1>Explore the cities</h1>
+          </div>
+
           {/* Carousel */}
           <Carousel />
-        </Container>
+        </div>
       </div>
 
       {/* Services section */}
@@ -56,64 +62,37 @@ const Home = () => {
         </Container>
       </div>
       {/* Categories section */}
-      <div className="my-5">
-        <Container>
+      <div className="">
+        <div className="titre-categories">
           <h1>What kind of entertainment do you want ?</h1>
-          <Row className="my-5">
-            <Col
-              className="d-flex justify-content-center category_card"
-              md={4}
-              sm={12}
-              xs={12}
-            >
-              <Image fluid className="category_img" src={a} rounded />
+        </div>
+
+        <Container fluid className="p-0 m-0">
+          <Row className="m-0 p-0">
+            <Col className=" category_card p-0 m-0" md={4} sm={12} xs={12}>
+              <Image fluid className="category_img" src={escape} />
               <div className="category_title h3">Make an escape</div>
             </Col>
-            <Col
-              className="d-flex justify-content-center category_card"
-              md={4}
-              sm={12}
-              xs={12}
-            >
-              <Image fluid className="category_img" src={b} rounded />
+            <Col className="category_card p-0 m-0" md={4} sm={12} xs={12}>
+              <Image fluid className="category_img" src={activity} />
               <div className="category_title h3">Discover activities</div>
             </Col>
-            <Col
-              className="d-flex justify-content-center category_card"
-              md={4}
-              sm={12}
-              xs={12}
-            >
-              <Image fluid className="category_img" src={c} rounded />
+            <Col className=" category_card p-0 m-0" md={4} sm={12} xs={12}>
+              <Image fluid className="category_img" src={monument} />
               <div className="category_title h3">Culture discover</div>
             </Col>
           </Row>
-          <Row className="my-5">
-            <Col
-              className="d-flex justify-content-center category_card"
-              md={4}
-              sm={12}
-              xs={12}
-            >
-              <Image fluid className="category_img" src={a} rounded />
+          <Row className="m-0 p-0">
+            <Col className="category_card p-0 m-0" md={4} sm={12} xs={12}>
+              <Image fluid className="category_img" src={coffee} />
               <div className="category_title h3">Take a coffee break</div>
             </Col>
-            <Col
-              className="d-flex justify-content-center category_card"
-              md={4}
-              sm={12}
-              xs={12}
-            >
-              <Image fluid className="category_img" src={b} rounded />
+            <Col className=" category_card p-0 m-0" md={4} sm={12} xs={12}>
+              <Image fluid className="category_img" src={spa} />
               <div className="category_title h3">Relaxation centers</div>
             </Col>
-            <Col
-              className="d-flex justify-content-center category_card"
-              md={4}
-              sm={12}
-              xs={12}
-            >
-              <Image fluid className="category_img" src={c} rounded />
+            <Col className=" category_card p-0 m-0" md={4} sm={12} xs={12}>
+              <Image fluid className="category_img" src={cinema} />
               <div className="category_title h3">Go to cinemas</div>
             </Col>
           </Row>
@@ -121,7 +100,9 @@ const Home = () => {
       </div>
       {/* How it works section */}
       <div>
-        <Container fluid className="howitworks_section pt-5">
+        <Container fluid className="howitworks_section py-5">
+          <br />
+          <br />
           <h1>How it works ?</h1>
           <p>
             Book experiences to keep exploring what you discovered inside,
