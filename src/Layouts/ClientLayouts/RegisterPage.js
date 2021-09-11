@@ -44,7 +44,7 @@ const RegisterPage = (props) => {
     dispatch(signup(user));
   };
   return (
-    <div>
+    <div className="container py-5">
       <Form onSubmit={userSignup}>
         <Input
           placeholder="First name"

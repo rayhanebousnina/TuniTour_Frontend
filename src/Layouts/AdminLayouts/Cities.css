@@ -2,3 +2,12 @@
   height: 10rem;
   width: auto;
 }
+.card-container {
+  height: 350px;
+}
+
+.card-body-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

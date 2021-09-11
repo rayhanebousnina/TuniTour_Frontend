@@ -1,15 +1,17 @@
-const inisialState = {
-  token: null,
-  user: {
-    fullname: "",
-    tel: "",
+const initialState = {
+  token: {
+    firstName: "",
+    lastName: "",
     email: "",
+    birthDate: "",
+    contactNumber: "",
+    profilePicture: "",
   },
   authenticate: false,
   authenticating: false,
 };
 
-export const userLoginReducer = (state = inisialState, action) => {
+export const userLoginReducer = (state = initialState, action) => {
   switch (action.type) {
     case " LOGIN_FAILED":
       state = {
@@ -20,7 +22,6 @@ export const userLoginReducer = (state = inisialState, action) => {
     case "LOGIN_SUCCESS":
       state = {
         ...state,
-        user: action.payload.user,
         token: action.payload.token,
         authenticate: true,
       };
@@ -29,7 +30,7 @@ export const userLoginReducer = (state = inisialState, action) => {
 
     case "LOGOUT_SUCCESS":
       state = {
-        ...inisialState,
+        ...initialState,
       };
       break;
     default:

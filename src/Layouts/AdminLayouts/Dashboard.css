@@ -22,6 +22,7 @@
   top: 0;
   left: -100%;
   transition: 850ms;
+  z-index: 5;
 }
 
 .nav-menu.active {
@@ -79,4 +80,20 @@
   border-radius: 5rem;
   height: 3rem;
   width: auto;
+}
+
+.card {
+  height: 350px;
+  width: 90%;
+}
+
+.card-img,
+.card-img-top {
+  height: 45%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

@@ -1,31 +1,47 @@
 .footer_style {
-    background-color: #f7f7f7f7;
-    height: 20rem;
+  background-color: #f7f7f7f7;
+  height: 20rem;
 }
 
 .logo {
-    height: 10rem;
-    width: auto;
+  height: 10rem;
+  width: auto;
 }
 .subscribe_btn {
-    border-top-right-radius: 23px;
-    border-bottom-right-radius: 23px;
-    background-color: #78D196;
-    border-color: #78D196;
-    color: #f7f7f7f7;
-    width: 150px;
-    height: 45px;
-    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 10%);
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+  background-color: #78d196;
+  border-color: #78d196;
+  color: #f7f7f7f7;
+  width: 150px;
+  height: 45px;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 10%);
 }
 .subscribe_btn:hover {
-    background-color: #78D196;
-    border-color: #78D196;
-    color: #f7f7f7f7;
-    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 10%);
+  background-color: #78d196;
+  border-color: #78d196;
+  color: #f7f7f7f7;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 10%);
 }
 .subscribe_input {
-    height: 45px !important;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 10%);
+  height: 45px !important;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 10%);
+}
+.copyright_section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.116);
+}
+li {
+  list-style-type: none;
+}
+li:hover {
+  border-bottom: 1px solid #78d196;
+  color: black;
+}
+.useful_link {
+  text-decoration: none;
+  color: black;
 }

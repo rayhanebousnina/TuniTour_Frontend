@@ -1,22 +1,24 @@
 import axios from "axios";
+import jwt_decode from "jwt-decode";
 
-export const login = (user) => async (dispatch) => {
+export const login = (token) => async (dispatch) => {
   try {
-    const res = await axios.post(`http://localhost:4000/api/login`, {
-      ...user,
-    });
+    const res = await axios.post(`http://localhost:4000/api/login`, token);
     if (res.status === 200) {
-      const { token, user } = res.data;
+      const { token } = res.data;
+      // const decodedToken = jwt_decode(token);
       console.log(token);
+
+      // if (decodedToken === "user") {
       localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(user));
       dispatch({
         type: "LOGIN_SUCCESS",
         payload: {
           token,
-          user,
         },
       });
+      // }
+      console.log(token, "wiss");
     } else {
       if (res.status === 400) {
         dispatch({
@@ -34,14 +36,13 @@ export const login = (user) => async (dispatch) => {
 
 export const isUserLoggedIn = () => {
   return async (dispatch) => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      const user = JSON.parse(localStorage.getItem("user"));
+    const result = localStorage.getItem("token");
+    if (result) {
+      const token = jwt_decode(result);
       dispatch({
         type: "LOGIN_SUCCESS",
         payload: {
           token,
-          user,
         },
       });
     } else {

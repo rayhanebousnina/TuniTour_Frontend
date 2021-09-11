@@ -7,9 +7,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 const LoginPage = (props) => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [hash_password, setHashPassword] = useState("");
 
-  const user = useSelector((state) => state.userLoginReducer);
+  const auth = useSelector((state) => state.userLoginReducer);
   const dispatch = useDispatch();
 
   const userLogin = (e) => {
@@ -17,13 +17,13 @@ const LoginPage = (props) => {
 
     const user = {
       email,
-      password,
+      hash_password,
     };
 
     dispatch(login(user));
   };
 
-  if (user.authenticate) {
+  if (auth.authenticate) {
     return <Redirect to={`/home`} />;
   }
 
@@ -42,9 +42,9 @@ const LoginPage = (props) => {
         <Input
           placeholder="Password"
           type="password"
-          value={password}
+          value={hash_password}
           onChange={(e) => {
-            setPassword(e.target.value);
+            setHashPassword(e.target.value);
           }}
         />
         <Button type="submit" variant="info">

@@ -20,7 +20,7 @@ const NavigationBar2 = () => {
     <div>
       <Navbar className="nav" bg="transparent" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/home">
             <Image fluid src={logo} className="logo_style" />
           </Navbar.Brand>
           <MiniSearchbar />

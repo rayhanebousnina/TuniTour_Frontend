@@ -25,7 +25,7 @@ function Dashboard() {
                 className="profile_pic"
                 src="https://www.tekoway.com/wp-content/uploads/2018/12/John-Doe.jpg"
               />
-              <h4>My Profile</h4>
+              <h4 className="px-3">My Profile</h4>
             </div>
           </Link>
         </div>

@@ -51,11 +51,15 @@ const Carousel = () => {
         <OwlCarousel className="owl-theme pt-5" {...options}>
           {cities.map((el, key) => (
             <div className="item city_card" key={key}>
-              <Image className="carousel_image city_img" src={el.cityImage} />
+              <Image
+                fluid
+                className="carousel_image city_img"
+                src={el.cityImage}
+              />
               <div className="city_title h3">
-                {el.cityName}
+                <h4>{el.cityName}</h4>
                 <Link to={`/city/${el._id}`} id={el._id}>
-                  <Button>see details</Button>
+                  <Button className="discover_btn">see details</Button>
                 </Link>
               </div>
             </div>

@@ -33,15 +33,14 @@ const Services = () => {
   return (
     <Container>
       <Row>
-        <Col md={3} sm={0} xs={0}></Col>
-        <Col md={9} sm={12} xs={12}>
+        <Col>
           <Row className="my-5">
             <AddServiceModal />
           </Row>
 
           <Row className="my-5">
             {services.map((el, key) => (
-              <Col md={4} sm={6} xs={12}>
+              <Col md={4} sm={6} xs={12} className="py-3">
                 <Card key={key}>
                   <Card.Img
                     fluid
