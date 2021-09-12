@@ -3,6 +3,7 @@ import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 import Input from "./Input";
 import { signup } from "../../Redux/Actions/userRegisterActions";
 import { useSelector, useDispatch } from "react-redux";
+import { Redirect } from "react-router-dom";
 
 const RegisterModal = (props) => {
   // Modal State
@@ -15,24 +16,25 @@ const RegisterModal = (props) => {
   const [lastName, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [birthDate, setBirthDate] = useState("");
-  const [password, setPassword] = useState("");
+  const [hash_password, setHash_password] = useState("");
   const [contactNumber, setContactNumber] = useState("");
   const [profilePicture, setProfilePicture] = useState("");
 
-  const user = useSelector((state) => state.user);
+  const userReg = useSelector((state) => state.userRegisterReducer);
+  const userLog = useSelector((state) => state.userLoginReducer);
   const dispatch = useDispatch();
-  console.log("user", user);
+  console.log("user", userReg);
   useEffect(() => {
-    if (!user.loading) {
+    if (!userReg.loading) {
       setFirstName("");
       setLastname("");
       setEmail("");
       setBirthDate("");
-      setPassword("");
+      setHash_password("");
       setContactNumber("");
       setProfilePicture("");
     }
-  }, [user.loading]);
+  }, [userReg.loading]);
 
   const userSignup = (e) => {
     e.preventDefault();
@@ -42,7 +44,7 @@ const RegisterModal = (props) => {
       lastName,
       email,
       birthDate,
-      password,
+      hash_password,
       contactNumber,
       profilePicture,
     };
@@ -50,6 +52,12 @@ const RegisterModal = (props) => {
     dispatch(signup(user));
   };
 
+  if (userLog.authenticate) {
+    return <Redirect to={"/admin"} />;
+  }
+  if (userReg.loading) {
+    return <p>Loading.....!</p>;
+  }
   // if (user.loading) {
   //   return <p>loading</p>;
   // }
@@ -115,10 +123,10 @@ const RegisterModal = (props) => {
             />
             <Input
               placeholder="Password"
-              type="password"
-              value={password}
+              type="hash_password"
+              value={hash_password}
               onChange={(e) => {
-                setPassword(e.target.value);
+                setHash_password(e.target.value);
               }}
             />
           </Form>

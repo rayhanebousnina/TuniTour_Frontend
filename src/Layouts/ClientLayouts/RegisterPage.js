@@ -6,30 +6,33 @@ import { useSelector, useDispatch } from "react-redux";
 import NavigationBar2 from "../../Components/Navbars/Navbar2";
 import "./RegisterPage.css";
 import Footer from "../../Components/Footer/Footer";
+import { Redirect } from "react-router-dom";
 
 const RegisterPage = (props) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [birthDate, setBirthDate] = useState("");
-  const [password, setPassword] = useState("");
+  const [hash_password, setHash_password] = useState("");
   const [contactNumber, setContactNumber] = useState("");
   const [profilePicture, setProfilePicture] = useState("");
   console.log("firstname", firstName);
-  const user = useSelector((state) => state.user);
+
+  const userReg = useSelector((state) => state.userRegisterReducer);
+  const userLog = useSelector((state) => state.userLoginReducer);
   const dispatch = useDispatch();
   //   console.log("user", user);
   useEffect(() => {
-    if (!user.loading) {
+    if (!userReg.loading) {
       setFirstName("");
       setLastname("");
       setEmail("");
       setBirthDate("");
-      setPassword("");
+      setHash_password("");
       setContactNumber("");
       setProfilePicture("");
     }
-  }, [user.loading]);
+  }, [userReg.loading]);
 
   const userSignup = (e) => {
     e.preventDefault();
@@ -39,13 +42,20 @@ const RegisterPage = (props) => {
       lastName,
       email,
       birthDate,
-      password,
+      hash_password,
       contactNumber,
       profilePicture,
     };
 
-    dispatch(signup(user));
+    dispatch(signup(userReg));
   };
+
+  if (userLog.authenticate) {
+    return <Redirect to={"/admin"} />;
+  }
+  if (userReg.loading) {
+    return <p>Loading.....!</p>;
+  }
   return (
     <div>
       {/* Navigation bar */}
@@ -95,6 +105,14 @@ const RegisterPage = (props) => {
                 }}
               />
               <Input
+                placeholder="Password"
+                type="password"
+                value={hash_password}
+                onChange={(e) => {
+                  setHash_password(e.target.value);
+                }}
+              />
+              <Input
                 placeholder="Phone number"
                 type="number"
                 value={contactNumber}
@@ -110,14 +128,7 @@ const RegisterPage = (props) => {
                   setProfilePicture(e.target.value);
                 }}
               />
-              <Input
-                placeholder="Password"
-                type="password"
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-              />
+
               <Button type="submit" variant="light" className="btn-signup">
                 Register Now
               </Button>

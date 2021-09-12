@@ -23,11 +23,13 @@ const City = () => {
       <div className="landing_city_page">
         {/* Navigation bar */}
         <NavigationBar2 />
-        <Image fluid src={city.cityImage} className="service_img" />
-        <Container className="">
+        <Image fluid src={city.cityImage} className="cityy_img" />
+        <Container>
           <Row>
-            <Col className="mt-2 text-center" md={12}>
-              <h2 className="service_title">{city.cityName} City</h2>
+            <Col className="text-center" md={12}>
+              <div className="cityy_title">
+                <h2>{city.cityName} City</h2>
+              </div>
             </Col>
           </Row>
           <Row>

@@ -7,6 +7,6 @@ import { userLoginReducer } from "./userLoginReducers";
 export const rootReducer = combineReducers({
   servicesReducer,
   citiesReducer,
-  user: userRegisterReducer,
+  userRegisterReducer,
   userLoginReducer,
 });
