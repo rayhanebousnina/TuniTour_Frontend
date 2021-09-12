@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
 import NavigationBar2 from "../../Components/Navbars/Navbar2";
 import "./City.css";
 import { getCityById } from "../../Redux/Actions/cityActions";
@@ -22,12 +22,23 @@ const City = () => {
   }, [dispatch, id]);
 
   const city = useSelector((state) => state.citiesReducer.city);
+  const activities = useSelector((state) => state.servicesReducer.services);
+  var servicesData = [];
+  activities.forEach((element) => {
+    if (element.serviceLocation == city.cityName) {
+      servicesData.push(element);
+    }
+  });
+  console.log("activitieeeeeesss", activities, servicesData);
   console.log("onecity", city);
   var myData = [
     {
       text1: "aaa",
     },
   ];
+  function limit(string = "", limit = 0) {
+    return string.substring(0, limit);
+  }
   if (city.length !== 8) {
     var myCity = city.cityName;
     switch (myCity) {
@@ -69,12 +80,46 @@ const City = () => {
             </Col>
           </Row>
           <Row>
-            <Col className="py-4" md={{ span: 8, offset: 4 }}>
-              <h2>{city.cityName} City</h2>
+            <Col className="py-4">
+              <h2 className="text-center">{city.cityName} City</h2>
             </Col>
             <Col md={12} sm={12}>
               <p className="city-text">{city.cityDescription}</p>
             </Col>
+          </Row>
+          <Row>
+            <Col>
+              <h2 className="text-center py-4">Services</h2>
+            </Col>
+          </Row>
+          <Row>
+            {servicesData.map((el, key) => (
+              <Col md={4} sm={6} xs={12} key={key} className="py-4">
+                <Card key={key}>
+                  <Card.Img
+                    fluid
+                    variant="top"
+                    src={el.serviceImage}
+                    style={{ height: "13rem" }}
+                  />
+                  <Card.Body>
+                    <Card.Title>{el.serviceName}</Card.Title>
+                    <Card.Text>
+                      {limit(`${el.serviceDescription}`, 200)}
+                    </Card.Text>
+                    <Link
+                      to={`/service/${el._id}`}
+                      id={el._id}
+                      className="text-center"
+                    >
+                      <Button variant="primary discover_btn ">
+                        See details
+                      </Button>
+                    </Link>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
           <Row>
             <Col>

@@ -45,7 +45,7 @@ const Home = () => {
       <div>
         <div className="py-5 cities">
           <div className="ms-3">
-            <h1>Explore the cities</h1>
+            <h1 className="text-center">Explore the cities</h1>
           </div>
 
           {/* Carousel */}
@@ -56,7 +56,9 @@ const Home = () => {
       {/* Services section */}
       <div className="Service_section">
         <Container className="py-5">
-          <h1>Find different activities and places to discover</h1>
+          <h1 className="text-center">
+            Find different activities and places to discover
+          </h1>
           {/* Service card */}
           <ServiceCard />
         </Container>
@@ -64,7 +66,9 @@ const Home = () => {
       {/* Categories section */}
       <div className="">
         <div className="titre-categories">
-          <h1>What kind of entertainment do you want ?</h1>
+          <h1 className="text-center">
+            What kind of entertainment do you want ?
+          </h1>
         </div>
 
         <Container fluid className="p-0 m-0">
