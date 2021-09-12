@@ -39,9 +39,6 @@ const NavigationBar = () => {
             <span className="T">T</span>uni<span className="T">T</span>our
           </h3>
           <Nav className="ms-auto nav_items">
-            <Nav.Link href="#link" className="mr_nav_item">
-              <FaHeart /> Wishlist
-            </Nav.Link>
             <NavDropdown
               title={<FaGlobeAmericas />}
               id="basic-nav-dropdown"
@@ -60,7 +57,7 @@ const NavigationBar = () => {
     return (
       <Navbar className="nav" bg="transparent" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/home">
             <Image fluid src={logo} className="logo_style" />
           </Navbar.Brand>
           <h3 className="name_style">
@@ -70,7 +67,9 @@ const NavigationBar = () => {
             <Nav.Link href="#link" className="mr_nav_item">
               <FaHeart /> Wishlist
             </Nav.Link>
-            <Button onClick={userLogout}>logOut</Button>
+            <Button className="logout_btn" onClick={userLogout}>
+              <i class="fas fa-sign-out-alt"></i>
+            </Button>
           </Nav>
         </Container>
       </Navbar>

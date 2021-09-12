@@ -19,7 +19,7 @@ function Dashboard() {
           <Link to="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
-          <Link to="/admin/account" className="menu-bars ms-auto">
+          {/* <Link to="/admin/account" className="menu-bars ms-auto">
             <div className="d-flex justify-content-around">
               <Image
                 className="profile_pic"
@@ -27,7 +27,7 @@ function Dashboard() {
               />
               <h4 className="px-3">My Profile</h4>
             </div>
-          </Link>
+          </Link> */}
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>

@@ -30,3 +30,10 @@
     font-size: 4.5vw;
   }
 }
+.logout_btn {
+  background-color: #f04141 !important;
+  border-color: #f04141 !important;
+  border-radius: 30px !important;
+  width: 100px;
+  height: 45px;
+}

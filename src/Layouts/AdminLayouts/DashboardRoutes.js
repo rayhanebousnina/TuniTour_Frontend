@@ -13,8 +13,8 @@ const DashboardRoutes = () => {
       <Router>
         <Dashboard />
         <Switch>
-          <Route path="/admin/home" exact component={AdminHome} />
-          <Route path="/admin/account" component={AdminAccount} />
+          {/* <Route path="/admin/home" exact component={AdminHome} /> */}
+          {/* <Route path="/admin/account" component={AdminAccount} /> */}
           <Route path="/admin/categories" component={Category} />
           <Route path="/admin/cities" component={Cities} />
           <Route path="/admin/services" component={Services} />

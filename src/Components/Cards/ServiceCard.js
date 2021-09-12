@@ -15,6 +15,10 @@ const ServiceCard = () => {
   const services = useSelector((state) => state.servicesReducer.services);
   console.log("allservices", services);
 
+  // limit service description
+  function limit(string = "", limit = 0) {
+    return string.substring(0, limit);
+  }
   return (
     <div>
       {services.length && (
@@ -30,18 +34,25 @@ const ServiceCard = () => {
             <Carousel.Item>
               <div id="container">
                 <div class="product-details">
-                  <h1>{el.serviceName}</h1>
-                  <span class="hint-star star">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                  </span>
+                  <div className="text-center">
+                    <h1>{el.serviceName}</h1>
+                  </div>
 
-                  <p class="information">{el.serviceDescription}</p>
+                  <br></br>
+                  <div className="text-center mb-2">
+                    <span class="hint-star star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <p class="information">
+                    {limit(`${el.serviceDescription}`, 120)} ...
+                  </p>
 
-                  <div class="control">
+                  <div className="control">
                     <Link to={`/service/${el._id}`} id={el._id}>
                       <button class="btn_service_card">
                         <span class="price">{el.servicePrice} DNT</span>

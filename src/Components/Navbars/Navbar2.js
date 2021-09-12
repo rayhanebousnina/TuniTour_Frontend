@@ -25,9 +25,6 @@ const NavigationBar2 = () => {
           </Navbar.Brand>
           <MiniSearchbar />
           <Nav className="ms-auto nav_items">
-            <Nav.Link href="#link" className="mr_nav_item">
-              <FaHeart /> Wishlist
-            </Nav.Link>
             <NavDropdown
               title={<FaGlobeAmericas />}
               id="basic-nav-dropdown"
