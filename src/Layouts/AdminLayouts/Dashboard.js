@@ -19,15 +19,16 @@ function Dashboard() {
           <Link to="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
-          {/* <Link to="/admin/account" className="menu-bars ms-auto">
-            <div className="d-flex justify-content-around">
-              <Image
-                className="profile_pic"
-                src="https://www.tekoway.com/wp-content/uploads/2018/12/John-Doe.jpg"
-              />
-              <h4 className="px-3">My Profile</h4>
+
+          <div className="menu-bars ms-auto">
+            <div className="d-flex justify-content-around profil">
+              <h4 className="px-3 pro">
+                {" "}
+                <i class="fas fa-user-circle me-2"></i>
+                Admin
+              </h4>
             </div>
-          </Link> */}
+          </div>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>

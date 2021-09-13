@@ -35,6 +35,10 @@ const Services = () => {
     dispatch(removeService(id));
     console.log("service deleted", id);
   };
+
+  function limit(string = "", limit = 0) {
+    return string.substring(0, limit);
+  }
   return (
     <Container>
       <Row>
@@ -60,6 +64,7 @@ const Services = () => {
                     <Card.Text>
                       <p>{el.serviceLocation}</p>
                       <p>{el.servicePrice} DNT</p>
+                      <p>{limit(`${el.serviceDescription}`, 150)} ...</p>
                     </Card.Text>
                     <Row className="text-center">
                       <Col>

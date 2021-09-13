@@ -20,6 +20,7 @@ const Service = () => {
     myService = service;
   }
   const services = useSelector((state) => state.servicesReducer.services);
+
   function limit(string = "", limit = 0) {
     return string.substring(0, limit);
   }

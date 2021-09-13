@@ -15,6 +15,9 @@ const Cities = () => {
   const cities = useSelector((state) => state.citiesReducer.cities);
   console.log("cities", cities);
 
+  function limit(string = "", limit = 0) {
+    return string.substring(0, limit);
+  }
   return (
     <Container>
       <Row>
@@ -34,8 +37,22 @@ const Cities = () => {
                   />
                   <Card.Body className="card-body-style">
                     <Card.Title>{el.cityName}</Card.Title>
-                    <Card.Text>{}</Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+
+                    <Card.Text>
+                      {limit(`${el.cityDescription}`, 110)} ...
+                    </Card.Text>
+                    <Row className="text-center">
+                      <Col>
+                        <Button variant="primary">
+                          <i class="fas fa-edit"></i>
+                        </Button>
+                      </Col>
+                      <Col>
+                        <Button variant="danger">
+                          <i class="far fa-trash-alt"></i>
+                        </Button>
+                      </Col>
+                    </Row>
                   </Card.Body>
                 </Card>
               </Col>
