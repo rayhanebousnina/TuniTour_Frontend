@@ -32,9 +32,9 @@ const NavigationBar = () => {
     return (
       <Navbar className="nav" bg="transparent" expand="lg">
         <Container>
-          <Navbar.Brand href="/home">
+          {/* <Navbar.Brand href="/home">
             <Image fluid src={logo} className="logo_style" />
-          </Navbar.Brand>
+          </Navbar.Brand> */}
           <h3 className="name_style">
             <span className="T">T</span>uni<span className="T">T</span>our
           </h3>

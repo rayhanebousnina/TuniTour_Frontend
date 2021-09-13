@@ -5,7 +5,8 @@ body {
   /* font-family: "Abril Fatface", cursive; */
 }
 .landing_section {
-  background-image: url(../../Assets/land.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.671), rgba(0, 0, 0, 0.4)),
+    url(../../Assets/land.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 40rem;
