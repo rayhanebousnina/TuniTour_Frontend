@@ -88,7 +88,7 @@ const AddServiceModal = () => {
                 onChange={handleInputChange}
                 name="image"
                 placeholder="Service Image"
-                type="file"
+                type="text"
               />
             </Row>
             <Row className="mb-3 mx-1">
@@ -160,7 +160,13 @@ const AddServiceModal = () => {
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
-          <Button variant="info" onClick={() => addService()}>
+          <Button
+            variant="info"
+            onClick={() => {
+              handleClose();
+              addService();
+            }}
+          >
             Add
           </Button>
         </Modal.Footer>

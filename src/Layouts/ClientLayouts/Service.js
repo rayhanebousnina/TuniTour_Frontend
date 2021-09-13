@@ -15,27 +15,32 @@ const Service = () => {
   }, [dispatch, id]);
 
   const service = useSelector((state) => state.servicesReducer.service);
+  var myService = {};
+  if (service !== undefined) {
+    myService = service;
+  }
   const services = useSelector((state) => state.servicesReducer.services);
-  console.log("service", service);
-  console.log("all services", services);
+  function limit(string = "", limit = 0) {
+    return string.substring(0, limit);
+  }
   return (
     <div>
       {/* Landing service section */}
       <div className="service_hero_section">
         {/* Navigation bar */}
         <NavigationBar2 />
-        <Image fluid src={service.serviceImage} className="service_img" />
+        <Image fluid src={myService.serviceImage} className="service_img" />
         <Container className="services_container">
           <Row>
             <Col className="mt-2 text-center" md={12}>
-              <h2 className="service_title">{service.serviceName} </h2>
+              <h2 className="service_title">{myService.serviceName} </h2>
             </Col>
           </Row>
           {/* Service Details */}
           <Row className="my-5">
             <Col className="text-center">
               <h3>DESCRIPTION</h3>
-              {service.serviceDescription}
+              {myService.serviceDescription}
             </Col>
             <Col>
               <Container className="service_box_info">
@@ -56,7 +61,7 @@ const Service = () => {
                     <i class="fas fa-tags"></i>
                   </Col>
                   <Col md={10}>
-                    <div>{service.servicePrice} DNT</div>
+                    <div>{myService.servicePrice} DNT</div>
                   </Col>
                 </Row>
                 <Row className="my-3">
@@ -64,7 +69,7 @@ const Service = () => {
                     <i class="fas fa-phone-square-alt"></i>
                   </Col>
                   <Col md={10}>
-                    <div>{service.servicePhone}</div>
+                    <div>{myService.servicePhone}</div>
                   </Col>
                 </Row>
                 <Row className="my-3">
@@ -72,7 +77,7 @@ const Service = () => {
                     <i class="fas fa-clock"></i>
                   </Col>
                   <Col md={10}>
-                    <div>{service.serviceWorkingHours}</div>
+                    <div>{myService.serviceWorkingHours}</div>
                   </Col>
                 </Row>
                 <Row className="my-3">
@@ -80,7 +85,7 @@ const Service = () => {
                     <i class="fas fa-map-marked-alt"></i>
                   </Col>
                   <Col md={10}>
-                    <div>{service.serviceAddress}</div>
+                    <div>{myService.serviceAddress}</div>
                   </Col>
                 </Row>
               </Container>
@@ -92,12 +97,18 @@ const Service = () => {
           </Row>
           <Row className="text-center">
             {services.map((el, key) => (
-              <Col md={4} sm={6} xs={12}>
+              <Col md={4} sm={6} xs={12} className="py-4">
                 <Card style={{ width: "100%" }} className="mr-3">
-                  <Card.Img variant="top" src={el.serviceImage} />
+                  <Card.Img
+                    variant="top"
+                    src={el.serviceImage}
+                    style={{ height: "13rem" }}
+                  />
                   <Card.Body>
                     <Card.Title>{el.serviceName}</Card.Title>
-                    <Card.Text>{el.serviceDescription}</Card.Text>
+                    <Card.Text>
+                      {limit(`${el.serviceDescription}`, 200)}
+                    </Card.Text>
                     <Button variant="danger">See details</Button>
                   </Card.Body>
                 </Card>

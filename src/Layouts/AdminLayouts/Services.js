@@ -57,18 +57,26 @@ const Services = () => {
                   />
                   <Card.Body>
                     <Card.Title>{el.serviceName}</Card.Title>
-                    <Card.Text>{el.serviceLocation}</Card.Text>
-                    <div>
-                      <UpdateServiceModal el={el} id={el._id} />
-                    </div>
-                    <Button
-                      variant="danger"
-                      onClick={() => {
-                        deleteItem(el._id);
-                      }}
-                    >
-                      Delete
-                    </Button>
+                    <Card.Text>
+                      <p>{el.serviceLocation}</p>
+                      <p>{el.servicePrice} DNT</p>
+                    </Card.Text>
+                    <Row className="text-center">
+                      <Col>
+                        <UpdateServiceModal el={el} id={el._id} />
+                      </Col>
+                      <Col>
+                        {" "}
+                        <Button
+                          variant="danger"
+                          onClick={() => {
+                            deleteItem(el._id);
+                          }}
+                        >
+                          <i class="far fa-trash-alt"></i>
+                        </Button>
+                      </Col>
+                    </Row>
                   </Card.Body>
                 </Card>
               </Col>

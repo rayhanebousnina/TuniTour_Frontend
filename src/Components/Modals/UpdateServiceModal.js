@@ -52,7 +52,7 @@ const UpdateServiceModal = ({ el, id }) => {
   return (
     <div>
       <Button variant="primary" onClick={handleShow}>
-        Update Service
+        <i class="fas fa-edit"></i>
       </Button>
 
       <Modal
