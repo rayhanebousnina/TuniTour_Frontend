@@ -19,9 +19,8 @@ const RegisterPage = (props) => {
   console.log("firstname", firstName);
 
   const userReg = useSelector((state) => state.userRegisterReducer);
-  const userLog = useSelector((state) => state.userLoginReducer);
   const dispatch = useDispatch();
-  //   console.log("user", user);
+
   useEffect(() => {
     if (!userReg.loading) {
       setFirstName("");
@@ -47,14 +46,14 @@ const RegisterPage = (props) => {
       profilePicture,
     };
 
-    dispatch(signup(userReg));
+    dispatch(signup(user));
   };
 
-  if (userLog.authenticate) {
-    return <Redirect to={"/admin"} />;
-  }
   if (userReg.loading) {
     return <p>Loading.....!</p>;
+  }
+  if (userReg.registered) {
+    return <Redirect to={"/login"} />;
   }
   return (
     <div>

@@ -2,6 +2,7 @@ const initState = {
   error: null,
   message: "",
   loading: false,
+  registered: false,
 };
 
 export const userRegisterReducer = (state = initState, action) => {
@@ -17,6 +18,7 @@ export const userRegisterReducer = (state = initState, action) => {
       state = {
         ...state,
         loading: false,
+        registered: true,
         message: action.payload.message,
       };
       console.log(state, "state");
