@@ -76,8 +76,8 @@ const Footer = () => {
               <Row className="mt-2">
                 <Image src={applestore} />
               </Row>
-              <Row className="mt-3 text-center">
-                <Col className="circle">
+              <Row className="mt-3 mx-3 text-center">
+                <Col>
                   <FaFacebookSquare />
                 </Col>
                 <Col>
