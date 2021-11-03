@@ -27,7 +27,7 @@ const NavigationBar2 = () => {
           <Nav className="ms-auto nav_items">
             <NavDropdown
               title={<FaGlobeAmericas />}
-              id="basic-nav-dropdown"
+              id="basic-nav-dropdown second"
               className="mr_nav_item"
             >
               <NavDropdown.Item href="#action/3.1">Français</NavDropdown.Item>

@@ -30,7 +30,7 @@ const NavigationBar = () => {
 
   const notLoggedIn = () => {
     return (
-      <Navbar className="nav" bg="transparent" expand="lg">
+      <Navbar className="nav" bg="transparent" expand="lg" id="navbar_home">
         <Container>
           {/* <Navbar.Brand href="/home">
             <Image fluid src={logo} className="logo_style" />
@@ -40,9 +40,9 @@ const NavigationBar = () => {
           </h3>
           <Nav className="ms-auto nav_items">
             <NavDropdown
-              title={<FaGlobeAmericas />}
-              id="basic-nav-dropdown"
-              className="mr_nav_item"
+              title={<FaGlobeAmericas style={{ color: "white" }} />}
+              id="basic-nav-dropdowns"
+              className="mr_nav_item  "
             >
               <NavDropdown.Item href="#action/3.1">Français</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Arabe</NavDropdown.Item>

@@ -94,3 +94,6 @@ body {
     rgba(255, 255, 255, 1) 100%
   );
 }
+.title_style {
+  color: white;
+}

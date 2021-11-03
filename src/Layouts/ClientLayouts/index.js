@@ -24,7 +24,7 @@ const Home = () => {
         <NavigationBar />
         <Container>
           <Row className="mt-5 text-center">
-            <h1>This is your guide</h1>
+            <h1 className="title_style">This is your guide</h1>
           </Row>
         </Container>
         <Container className="landing_section_content">

@@ -22,7 +22,15 @@ const Footer = () => {
             sm={12}
             xs={12}
           >
-            <img className="logo" src={logo} />
+            <Container className="ms-5">
+              <Row>
+                <img className="logo" src={logo} />
+              </Row>
+              <Row>
+                TuniTour is a tour guide <br /> to discover the beauty of
+                tunisian cities.
+              </Row>
+            </Container>
           </Col>
           <Col
             className="d-flex justify-content-center mb-5"
@@ -75,14 +83,14 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-      {/* <Container fluid className="text-center">
+      <Container fluid className="text-center">
         <Row className="copyright_section">
           <Col>
-            <i class="far fa-copyright"></i>
+            <i class="far fa-copyright"></i> TuniTour
           </Col>
           <Col>
             <pre>
-              Legal notice·Terms·Privacy·Cookies{" "}
+              Legal notice · Terms · Privacy · Cookies
               <i class="fab fa-facebook-f"></i>
               <i class="fab fa-instagram"></i>
               <i class="fab fa-twitter"></i>
@@ -90,7 +98,7 @@ const Footer = () => {
             </pre>
           </Col>
         </Row>
-      </Container> */}
+      </Container>
     </>
   );
 };

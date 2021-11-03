@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
 import NavigationBar2 from "../../Components/Navbars/Navbar2";
 import "./Service.css";
 import { getServiceById } from "../../Redux/Actions/serviceActions";
-
+import Footer from "../../Components/Footer/Footer";
 const Service = () => {
   const dispatch = useDispatch();
 
@@ -110,13 +110,24 @@ const Service = () => {
                     <Card.Text>
                       {limit(`${el.serviceDescription}`, 200)}
                     </Card.Text>
-                    <Button variant="danger">See details</Button>
+                    <Link
+                      to={`/service/${el._id}`}
+                      id={el._id}
+                      className="text-center"
+                    >
+                      <Button variant="primary discover_btn ">
+                        See details
+                      </Button>
+                    </Link>
                   </Card.Body>
                 </Card>
               </Col>
             ))}
           </Row>
         </Container>
+        <div className="border-footer">
+          <Footer />
+        </div>
       </div>
     </div>
   );
