@@ -40,7 +40,7 @@ const Service = () => {
           {/* Service Details */}
           <Row className="my-5">
             <Col className="text-center">
-              <h3>DESCRIPTION</h3>
+              <h3 className="mb-5">DESCRIPTION</h3>
               {myService.serviceDescription}
             </Col>
             <Col>
