@@ -68,7 +68,7 @@ const Footer = () => {
             </Container>
             <Container className="">
               <Row className="mb-3">
-                <h4>Find Us</h4>
+                <h4>Find us</h4>
               </Row>
               <Row>
                 <Image src={googlepaly} />

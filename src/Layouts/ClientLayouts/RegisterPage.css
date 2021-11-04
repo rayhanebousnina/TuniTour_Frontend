@@ -10,12 +10,17 @@ Form input {
 }
 
 .btn-signup {
-  background-color: #78d196;
-  border-color: #78d196;
+  background-color: #78d196 !important;
+  border-color: #78d196 !important;
+  color: white;
+  border-radius: 30px !important;
+  width: 150px;
+  height: 45px;
 }
 .btn-signup:hover {
   background-color: #78d196;
   border-color: #78d196;
+  color: white;
 }
 
 .quote {
